@@ -7,7 +7,7 @@ export function Branch({ value, onChange }) {
   useEffect(() => {
     const fetchBranches = async () => {
       try {
-        const response = await fetch("http://localhost:8000/get_branch");
+        const response = await fetch("https://tnea-backend-5keh.onrender.com/get_branch");
         const data = await response.json();
         const formattedOptions = data.map(item => ({
           value: item[0],
@@ -41,7 +41,7 @@ export function Category({ value, onChange, }) {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await fetch("http://localhost:8000/get_category");
+        const response = await fetch("https://tnea-backend-5keh.onrender.com/get_category");
         const data = await response.json();
         const formattedOptions = data.map(item => ({
           value: item,
@@ -75,7 +75,7 @@ export function Region({ value, onChange }) {
   useEffect(() => {
     const fetchRegion = async () => {
       try {
-        const response = await fetch("http://localhost:8000/get_region");
+        const response = await fetch("https://tnea-backend-5keh.onrender.com/get_region");
         const data = await response.json();
         const formattedOptions = data.map(item => ({
           value: item,
@@ -108,7 +108,7 @@ export function Year({ value, onChange }) {
   useEffect(() => {
     const fetchYear = async () => {
       try {
-        const response = await fetch("http://localhost:8000/get_year");
+        const response = await fetch("https://tnea-backend-5keh.onrender.com/get_year");
         const data = await response.json();
         const formattedOptions = data.map(item => ({
           value: item,

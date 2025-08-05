@@ -89,7 +89,7 @@ const App = () => {
     };
 
     try {
-      const response = await fetch("http://localhost:8000/fetch_data", {
+      const response = await fetch("https://tnea-backend-5keh.onrender.com/fetch_data", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
