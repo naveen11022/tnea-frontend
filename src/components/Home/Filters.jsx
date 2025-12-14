@@ -14,7 +14,7 @@ export function Branch({ value, onChange, disabled }) {
   useEffect(() => {
     const fetchBranches = async () => {
       try {
-        const response = await fetch("http://127.0.0.1:8000/get_branch");
+        const response = await fetch("https://tnea-backend-5keh.onrender.com/get_branch");
         const data = await response.json();
         const formattedOptions = data.map(item => ({
           value: item[0],
@@ -47,7 +47,7 @@ export function Category({ value, onChange }) {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await fetch("http://127.0.0.1:8000/get_category");
+        const response = await fetch("https://tnea-backend-5keh.onrender.com/get_category");
         const data = await response.json();
         const formattedOptions = data.map(item => ({
           value: item,
@@ -79,7 +79,7 @@ export function Region({ value, onChange }) {
   useEffect(() => {
     const fetchRegion = async () => {
       try {
-        const response = await fetch("http://127.0.0.1:8000/get_region");
+        const response = await fetch("https://tnea-backend-5keh.onrender.com/get_region");
         const data = await response.json();
         const formattedOptions = data.map(item => ({
           value: item,
@@ -111,7 +111,7 @@ export function Year({ value, onChange }) {
   useEffect(() => {
     const fetchYear = async () => {
       try {
-        const response = await fetch("http://127.0.0.1:8000/get_year");
+        const response = await fetch("https://tnea-backend-5keh.onrender.com/get_year");
         const data = await response.json();
         const formattedOptions = data.map(item => ({
           value: item,
@@ -166,7 +166,7 @@ export function Group({ value, onChange, disabled }) {
   useEffect(() => {
     const fetchGroups = async () => {
       try {
-        const response = await fetch("http://127.0.0.1:8000/get_branch_category");
+        const response = await fetch("https://tnea-backend-5keh.onrender.com/get_branch_category");
         const data = await response.json();
         const formattedOptions = data.map(item => ({
           value: item,
@@ -199,7 +199,7 @@ export function CollegeType({ value, onChange }) {
   useEffect(() => {
     const fetchCollegeTypes = async () => {
       try {
-        const response = await fetch("http://127.0.0.1:8000/college_type");
+        const response = await fetch("https://tnea-backend-5keh.onrender.com/college_type");
         const data = await response.json();
         const formattedOptions = data.map(item => ({
           value: item,
