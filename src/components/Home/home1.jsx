@@ -35,7 +35,6 @@ const App = () => {
   const [loading, setLoading] = useState(false);
   const [collegeType, setCollegeType] = useState([]);
 
-  // Auto open/close sidebar based on region selection
   useEffect(() => {
     if (region.length > 0) {
       setCollapsed(false); // Open sidebar when region is selected
@@ -48,7 +47,7 @@ const App = () => {
     const fetchDistricts = async () => {
       try {
         if (region.length > 0) {
-          const response = await fetch("http://127.0.0.1:8000/districts", {
+          const response = await fetch("https://tnea-backend-5keh.onrender.com/districts", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ District: region }),
@@ -112,7 +111,7 @@ const App = () => {
 
     try {
       setLoading(true);
-      const response = await fetch("http://127.0.0.1:8000/fetch_data", {
+      const response = await fetch("https://tnea-backend-5keh.onrender.com/fetch_data", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(requestBody),
