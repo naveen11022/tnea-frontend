@@ -1,42 +1,361 @@
-/*#root {*/
-/*  max-width: 1280px;*/
-/*  margin: 0 auto;*/
-/*  padding: 2rem;*/
-/*  text-align: center;*/
-/*}*/
+/* ================================
+   TNEA College Finder - Enhanced UI
+   Professional Dark Blue + White
+   ================================ */
 
-/*.logo {*/
-/*  height: 6em;*/
-/*  padding: 1.5em;*/
-/*  will-change: filter;*/
-/*  transition: filter 300ms;*/
-/*}*/
-/*.logo:hover {*/
-/*  filter: drop-shadow(0 0 2em #646cffaa);*/
-/*}*/
-/*.logo.react:hover {*/
-/*  filter: drop-shadow(0 0 2em #61dafbaa);*/
-/*}*/
+.ant-layout {
+  background: #f0f4f8 !important;
+}
 
-/*@keyframes logo-spin {*/
-/*  from {*/
-/*    transform: rotate(0deg);*/
-/*  }*/
-/*  to {*/
-/*    transform: rotate(360deg);*/
-/*  }*/
-/*}*/
+/* Sidebar */
+.sidebar {
+  background: linear-gradient(180deg, #1a3a5c 0%, #0d2840 100%) !important;
+}
 
-/*@media (prefers-reduced-motion: no-preference) {*/
-/*  a:nth-of-type(2) .logo {*/
-/*    animation: logo-spin infinite 20s linear;*/
-/*  }*/
-/*}*/
+.sidebar .ant-layout-sider-trigger {
+  background: #0d2840 !important;
+}
 
-/*.card {*/
-/*  padding: 2em;*/
-/*}*/
+/* Select - Enhanced */
+.ant-select-selector {
+  border-radius: 8px !important;
+  border: 1.5px solid #e2e8f0 !important;
+  background: #fff !important;
+  min-height: 40px !important;
+  padding: 4px 8px !important;
+  transition: all 0.2s ease !important;
+}
 
-/*.read-the-docs {*/
-/*  color: #888;*/
-/*}*/
+.ant-select-selector:hover {
+  border-color: #94a3b8 !important;
+}
+
+.ant-select-focused .ant-select-selector {
+  border-color: #1a3a5c !important;
+  box-shadow: 0 0 0 3px rgba(26, 58, 92, 0.1) !important;
+}
+
+.ant-select-selection-placeholder {
+  color: #94a3b8 !important;
+}
+
+/* Multi-select tags only */
+.ant-select-multiple .ant-select-selection-item {
+  background: linear-gradient(135deg, #1a3a5c, #254d73) !important;
+  color: #fff !important;
+  border-radius: 6px !important;
+  border: none !important;
+  padding: 2px 8px !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+}
+
+/* Single select (pagination) - keep default */
+.ant-select-single .ant-select-selection-item {
+  background: transparent !important;
+  color: #333 !important;
+}
+
+.ant-select-multiple .ant-select-selection-item-remove {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.ant-select-multiple .ant-select-selection-item-remove:hover {
+  color: #fff !important;
+}
+
+.ant-select-dropdown {
+  border-radius: 10px !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12) !important;
+  padding: 6px !important;
+  border: 1px solid #e2e8f0 !important;
+}
+
+.ant-select-item {
+  border-radius: 6px !important;
+  margin: 2px 0 !important;
+}
+
+.ant-select-item-option-selected {
+  background: #e8f4fc !important;
+  font-weight: 500 !important;
+}
+
+.ant-select-item-option-active {
+  background: #f1f5f9 !important;
+}
+
+/* Input - Enhanced */
+.ant-input {
+  border-radius: 8px !important;
+  border: 1.5px solid #e2e8f0 !important;
+  height: 40px !important;
+  padding: 8px 12px !important;
+  transition: all 0.2s ease !important;
+}
+
+.ant-input:hover {
+  border-color: #94a3b8 !important;
+}
+
+.ant-input:focus {
+  border-color: #1a3a5c !important;
+  box-shadow: 0 0 0 3px rgba(26, 58, 92, 0.1) !important;
+}
+
+.ant-input::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* Buttons - Enhanced */
+.ant-btn {
+  border-radius: 8px !important;
+  font-weight: 500 !important;
+  height: 42px !important;
+  padding: 0 20px !important;
+  transition: all 0.2s ease !important;
+}
+
+.ant-btn-primary {
+  background: linear-gradient(135deg, #1a3a5c 0%, #254d73 100%) !important;
+  border: none !important;
+  box-shadow: 0 4px 12px rgba(26, 58, 92, 0.25) !important;
+}
+
+.ant-btn-primary:hover {
+  background: linear-gradient(135deg, #254d73 0%, #2d5a85 100%) !important;
+  box-shadow: 0 6px 16px rgba(26, 58, 92, 0.35) !important;
+  transform: translateY(-1px);
+}
+
+.ant-btn-default {
+  border: 1.5px solid #e2e8f0 !important;
+  color: #475569 !important;
+}
+
+.ant-btn-default:hover {
+  color: #1a3a5c !important;
+  border-color: #1a3a5c !important;
+  background: #f8fafc !important;
+}
+
+.ant-btn-text:hover {
+  background: #f1f5f9 !important;
+}
+
+/* Table - Enhanced */
+.ant-table {
+  background: #fff !important;
+  border-radius: 0 0 12px 12px !important;
+}
+
+.ant-table-thead > tr > th {
+  background: #f8fafc !important;
+  color: #1a3a5c !important;
+  font-weight: 600 !important;
+  font-size: 12px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  border-bottom: 2px solid #e2e8f0 !important;
+  padding: 14px 16px !important;
+}
+
+.ant-table-thead > tr > th::before {
+  display: none !important;
+}
+
+.ant-table-tbody > tr > td {
+  padding: 14px 16px !important;
+  border-bottom: 1px solid #f1f5f9 !important;
+  color: #334155 !important;
+  font-size: 13px !important;
+}
+
+.ant-table-tbody > tr:hover > td {
+  background: #f8fafc !important;
+}
+
+.ant-table-tbody > tr:last-child > td {
+  border-bottom: none !important;
+}
+
+/* Table cell text */
+.ant-table-tbody > tr > td {
+  background: transparent !important;
+}
+
+/* Pagination - Fixed */
+.ant-pagination {
+  padding: 16px !important;
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+}
+
+.ant-pagination-item {
+  border-radius: 6px !important;
+  border: 1px solid #d9d9d9 !important;
+  font-weight: 500 !important;
+  min-width: 32px !important;
+  height: 32px !important;
+  line-height: 30px !important;
+  background: #fff !important;
+}
+
+.ant-pagination-item a {
+  color: #333 !important;
+}
+
+.ant-pagination-item:hover {
+  border-color: #1a3a5c !important;
+}
+
+.ant-pagination-item:hover a {
+  color: #1a3a5c !important;
+}
+
+.ant-pagination-item-active {
+  background: #1a3a5c !important;
+  border-color: #1a3a5c !important;
+}
+
+.ant-pagination-item-active a {
+  color: #fff !important;
+}
+
+.ant-pagination-item-active:hover a {
+  color: #fff !important;
+}
+
+.ant-pagination-prev,
+.ant-pagination-next {
+  min-width: 32px !important;
+  height: 32px !important;
+}
+
+.ant-pagination-prev .ant-pagination-item-link,
+.ant-pagination-next .ant-pagination-item-link {
+  border-radius: 6px !important;
+  border: 1px solid #d9d9d9 !important;
+  background: #fff !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.ant-pagination-prev:hover .ant-pagination-item-link,
+.ant-pagination-next:hover .ant-pagination-item-link {
+  border-color: #1a3a5c !important;
+  color: #1a3a5c !important;
+}
+
+.ant-pagination-disabled .ant-pagination-item-link {
+  color: #d9d9d9 !important;
+  cursor: not-allowed !important;
+}
+
+.ant-pagination-options {
+  margin-left: 8px !important;
+}
+
+.ant-pagination-options .ant-select-selector {
+  min-height: 32px !important;
+  height: 32px !important;
+  background: #fff !important;
+}
+
+.ant-pagination-options .ant-select-selection-item {
+  color: #333 !important;
+  background: transparent !important;
+}
+
+/* Pagination dropdown */
+.ant-pagination-options .ant-select-dropdown {
+  z-index: 1050 !important;
+}
+
+.ant-pagination-options .ant-select-item-option {
+  color: #333 !important;
+}
+
+.ant-pagination-total-text {
+  color: #666 !important;
+  margin-right: 8px !important;
+}
+
+/* Jump to page */
+.ant-pagination-jump-prev,
+.ant-pagination-jump-next {
+  min-width: 32px !important;
+}
+
+/* Checkbox - Enhanced */
+.ant-checkbox-inner {
+  border-radius: 4px !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.4) !important;
+  background: transparent !important;
+}
+
+.ant-checkbox-checked .ant-checkbox-inner {
+  background: #64b5f6 !important;
+  border-color: #64b5f6 !important;
+}
+
+.ant-checkbox:hover .ant-checkbox-inner {
+  border-color: #64b5f6 !important;
+}
+
+/* Spin - Enhanced */
+.ant-spin-dot-item {
+  background: #1a3a5c !important;
+}
+
+.ant-spin-text {
+  color: #1a3a5c !important;
+  font-weight: 500 !important;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Filter dropdown */
+.ant-table-filter-dropdown {
+  border-radius: 10px !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12) !important;
+  padding: 8px !important;
+}
+
+.ant-table-filter-dropdown-btns {
+  border-top: 1px solid #f1f5f9 !important;
+  padding: 8px !important;
+}
+
+/* Space Compact */
+.ant-space-compact .ant-input {
+  border-radius: 0 !important;
+}
+
+.ant-space-compact .ant-input:first-child {
+  border-radius: 8px 0 0 8px !important;
+}
+
+.ant-space-compact .ant-input:last-child {
+  border-radius: 0 8px 8px 0 !important;
+}

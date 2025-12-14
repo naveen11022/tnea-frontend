@@ -1,42 +1,54 @@
-import { Input, Switch } from "antd";
+import { Input, Switch, Typography, Space, Card } from "antd";
 import { useState } from "react";
+
+const { Text } = Typography;
 
 function Ranks({ rankValue, cutoffValue, onRankChange, onCutoffChange }) {
   const [open, setOpen] = useState(true);
 
-
-
-  const handleToggle = (checked) => {
-    setOpen(checked);
-  };
-
   return (
-      <div>
-        <Switch
-          checkedChildren="Rank"
-          unCheckedChildren="Cutoff"
-          checked={open}
-          onChange={handleToggle}
-          style={{ backgroundColor: open ? "orange" : "blue" }}
-        />
-        <div style={{ width: "100%" }}>
-          {open ? (
-            <Input
-              type="number"
-              placeholder="Enter the rank"
-              value={rankValue}
-              onChange={(e) => onRankChange(e.target.value)}
-            />
-          ) : (
-            <Input
-              type="number"
-              placeholder="Enter the cutoff"
-              value={cutoffValue}
-              onChange={(e) => onCutoffChange(e.target.value)}
-            />
-          )}
-        </div>
-      </div>
+    <Card
+      bordered
+      style={{
+        width: "100%",
+        borderRadius: 12,
+        padding: 16,
+      }}
+    >
+      <Space direction="vertical" style={{ width: "100%" }} size={12}>
+        <Space align="center" style={{ justifyContent: "space-between", width: "100%" }}>
+          <Text strong style={{ fontSize: 16 }}>
+            {open ? "Rank Mode" : "Cutoff Mode"}
+          </Text>
+
+          <Switch
+            checkedChildren="Rank"
+            unCheckedChildren="Cutoff"
+            checked={open}
+            onChange={setOpen}
+            style={{ backgroundColor: open ? "orange" : "#1677ff" }}
+          />
+        </Space>
+
+        {open ? (
+          <Input
+            type="number"
+            placeholder="Enter Rank"
+            value={rankValue}
+            onChange={(e) => onRankChange(e.target.value)}
+            size="large"
+          />
+        ) : (
+          <Input
+            type="number"
+            placeholder="Enter Cutoff"
+            value={cutoffValue}
+            onChange={(e) => onCutoffChange(e.target.value)}
+            size="large"
+          />
+        )}
+      </Space>
+    </Card>
   );
 }
 
